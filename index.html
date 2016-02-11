@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+</head>
+
+<body>
+    <header class="background">
+
+        <div class="back-mountain"></div>
+        <div class="name">PARALLAX</div>
+        <div class="fore-peak"></div>
+        <div class="woods"></div>
+
+    </header>
+
+    <div id="main">
+
+        <div class="desc">
+            <h1>Simple Parallax Header</h1>
+            <hr>
+            <p>Easy to implement. Easy to add more layers. Easy to edit.</p>
+            <p>Simple Jquery function activated on Window scroll</p>
+        </div>
+
+
+    </div>
+
+    <script>
+        $(window).scroll(function() {
+
+            var wScroll = $(this).scrollTop();
+
+
+            $('.back-mountain').css({
+                "transform": 'translate(0px, ' + wScroll / -32 + '%)'
+            });
+            $('.name').css({
+                "transform": 'translate(0px, ' + wScroll / -64 + '%)'
+            });
+            $('.woods').css({
+                "transform": 'translate(0px, ' + wScroll / 20 + '%)'
+            });
+
+        });
+
+    </script>
+
+
+
+</body>
+
+
+</html>
